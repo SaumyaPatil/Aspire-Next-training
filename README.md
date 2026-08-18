@@ -120,3 +120,9 @@
 - Basic error handling/logging polish, README documentation
 - Recap of the full journey: Node core → Express → MongoDB → Auth → Integration
 - Discussion: next steps (learning TypeScript, testing, Docker, microservices, GraphQL — as future directions)
+
+---
+
+## Documentation
+https://www.npmjs.com/
+https://nodejs.org/docs/latest/api/
