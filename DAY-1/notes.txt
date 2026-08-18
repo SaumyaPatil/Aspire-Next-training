@@ -1,0 +1,75 @@
+1. What is Node.js? 
+
+- Node.js is a JavaScript runtime built on Google's V8 engine — it lets JS run outside the browser.
+- V8 engine: compiles JS to machine code, same engine that powers Chrome.
+- Why backend devs use it:
+    - One language across frontend and backend (JS everywhere)
+    - Non-blocking I/O → great for I/O-heavy apps (APIs, real-time apps, streaming)
+    - Huge npm ecosystem
+    - Fast prototyping
+
+
+2. Node vs Browser JavaScript 
+- Understanding differences between nodeJS and browser JS
+
+    - JS is used in both browsers and NodeJS, but building browser apps is very different from creating node applications. Even though its the same
+    language, the experiences are quite different.
+
+    - For frontend developers who already use JS a lot, nodeJS offeres a big benefit. You can use a single language to build both frontend and backend. 
+    That simplifies your work as learning a programming language deeply takes time, and with JS, you can do everything on both the client and server, 
+    putting you in a great position.
+
+    - What changes is the ecosystem. In the browser, you're mostly working with DOM or other web APIs like Cookies, but these don't exist in Node.js.
+    Theres no document, window, no DOM or any of the objects the browsers provide.
+
+    - On other hand, browser lacks many of the usefull apis that NodeJS offers through its modules, such as access to the file system. 
+    Node has its own globals: global, process, __dirname, __filename, require and access to OS-level things browsers can't touch: filesystem, 
+    network sockets, child processes.
+
+    - Another key difference is that you can control the environment with NodeJS. Unless you're building an open source that anyone can run, You know
+    exactly which version of NodeJS your application will use. This is much more convenient compared to browser, where you can't control which browser or
+    version your users will have.
+
+    - This means you can use all the modern ES2015+ JS features that your Node.js version supports. On the web, since browsers can be slow to update,
+    you might be stuck using older JS versions. While tools like babel can convert your code to be ES5-compatible for browsers, in Node.js, you wont 
+    need that.
+
+    - Another difference is that NodeJS supports both common JS and ES6 module systems (starting from Node.js v12), while in the browser, the ES
+    modules standard is just beginning to be widely implemented.
+
+    - In practice, this means that in Node.js, you can use both require() and import to load modules, while in the browser, you're limited to using
+    only import.
+
+
+3. Installing Node & npm 
+    node -v
+    npm -v
+
+- nvm (Node Version Manager): Why version managers matter - different projects need different Node versions.
+    nvm install --lts
+    nvm use --lts
+    nvm list
+
+
+4. REPL vs running a file 
+- Launching REPL in command prompt for quick experiments
+    node
+    > 1 + 1
+    > const x = "hello"
+    > .exit
+
+- Running a JS file locally. These are the actual programs.
+    node app.js
+
+
+5. npm basics 
+
+    mkdir day1-demo && cd day1-demo
+    npm init -y
+
+- Installing a package live:
+
+    npm install lodash
+    npm install --save-dev nodemon
+
+

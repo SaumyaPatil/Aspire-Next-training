@@ -1,0 +1,33 @@
+import and export statements - 
+
+- CommonJS (.js)
+    Default Export
+        module.exports = fn
+
+    Named Export
+        exports.fn = fn
+
+    Import (default)
+        const fn = require('./file')
+
+    Import (named)
+        const { fn } = require('./file')
+
+    File extension
+        .js
+
+- ES6 Modules (.mjs)
+    Default Export
+        export default fn
+
+    Named Export
+        export const fn = ...
+
+    Import (default)
+        import fn from './file.mjs'
+
+    Import (named)
+        import {fn} from './file.mjs'
+
+    File extension
+    .mjs
