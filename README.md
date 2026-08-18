@@ -1,6 +1,5 @@
 # Node.js Backend Training Plan — 12 Days
 
-**Format:** 1.5 hrs/day → 1 hr teaching + 0.5 hr doubt resolution
 **Priority order:** Node.js core → Express → MongoDB glimpse → Full-stack (frontend–backend) integration project
 
 ---
@@ -124,5 +123,6 @@
 ---
 
 ## Documentation
+
 - https://www.npmjs.com/
 - https://nodejs.org/docs/latest/api/
