@@ -11,32 +11,30 @@
 - Installing Node & npm, `node -v`, `npm -v`, using a version manager (nvm) briefly
 - REPL vs running a `.js` file
 - npm basics: `package.json`, `npm init`, installing packages, `dependencies` vs `devDependencies`
-- The event loop — conceptual overview (single-threaded, non-blocking I/O)
 
 ---
 
-## Day 2 — Core Modules & Async Programming (Part 1)
+## Day 2 — Core Modules & Async Programming
 
 - Built-in modules: `fs`, `path`, `os`, `events`
 - Reading/writing files (sync vs async methods)
 - CommonJS `require`/`module.exports` vs ES Modules `import/export`
-- Callbacks — how they work, callback hell problem (with example)
+- The event loop — conceptual overview (single-threaded, non-blocking I/O)
 
 ---
 
-## Day 3 — Async Programming (Part 2): Promises & Async/Await
+## Day 3 — HTTP Request & Response Fundamentals
 
-- Promises — creation, `.then/.catch/.finally`
-- `async/await` syntax, converting callback code to async/await
-- Error handling with `try/catch`
-- `Promise.all`, `Promise.allSettled` (brief)
+- Anatomy of an HTTP request: method, URL, headers, body
+- Anatomy of an HTTP response: status code, headers, body
+- Status code families (2xx/3xx/4xx/5xx) with real examples
+- Request/response cycle diagram: client → server → client
 
 ---
 
 ## Day 4 — Building a Server with Core HTTP Module + REST Basics
 
 - `http` module — creating a basic server, handling requests/responses
-- HTTP methods (GET, POST, PUT, DELETE), status codes, headers
 - What is REST? Resource-based URL design, statelessness
 - Why we use frameworks instead of raw `http` (motivation for Express)
 
