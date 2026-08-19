@@ -1,0 +1,191 @@
+1. Web Resources
+- A Web Resource is any data that can be obtained via internet.
+
+- A resource can be
+
+    - HTML document
+    - CSS document
+    - JSON Data or Plain text
+    - Image, Video, etc.
+
+2. Uniform Resource Locator (URL)
+- URL is a text string that specifies where a resource can be found on the internet.
+
+- We can access web resources using the URL.
+
+- Syntax: protocol://domainName/path?query-parameters
+
+- In the URL http://www.flipkart.com/watches?type=digital&rating=4,
+
+    - http is a Protocol
+    - www.flipkart.com is a Domain Name
+    - /watches is a Path
+    - type=digital&rating=4 is the Query Parameters
+
+- Protocol
+    - A protocol is a standard set of rules that allow electronic devices to communicate with each other.
+
+    - There are different types of protocols.
+
+        - Hypertext Transfer Protocol (HTTP)
+        - Hypertext Transfer Protocol Secure (HTTPS)
+        - Web Sockets, etc.
+
+- HTTP
+    - The Hypertext Transfer Protocol (HTTP), is a protocol used to transfer resources over the web.
+
+    - Examples: Internet forums, Educational sites, etc.
+
+    - HTTP Request: Message sent by the client
+
+    - HTTP Response: Message sent by the server
+
+- HTTPS
+    - In Hypertext Transfer Protocol Secure (HTTPS), information is transferred in an
+    encrypted format and provides secure communication.
+
+    - Examples: Banking Websites, Payment gateway, Login Pages, Emails and Corporate Sector Websites, etc.
+
+- Domain Name
+    - It indicates which Web server is being requested.
+
+- Path
+    - The path is to identify the resources on the server.
+
+- Examples:
+
+    - /watches in http://www.flipkart.com/watches
+    - /electronics/laptops/gaming in http://www.flipkart.com/electronics/laptops/gaming
+
+- Query Parameters
+    - Query parameters add some criteria to the request for the resource.
+
+    - Multiple query parameters can be added by using an & ( ampersand ) symbol.
+
+- For example,
+
+    - http://www.flipkart.com/watches?type=digital&rating=4
+
+3. HTTP
+    - HTTP Requests
+    - HTTP requests are messages sent by the client to initiate an action on the server.
+
+- HTTP request includes
+
+    - Start Line
+    - Headers
+    - Body
+
+- Start Line
+    - A Start Line specifies a
+
+    - URL
+    - HTTP Method
+    - HTTP Version
+
+
+- HTTP Methods
+
+- The HTTP Request methods indicate the desired action to be performed for a given resource.
+
+    Methods	                Description
+    GET (Read)	            Request for a resource(s) from the server
+    POST (Create)	        Submit data to the server
+    PUT (Update)	        The data within the request must be stored at the URL supplied, replacing any existing data
+    DELETE (Delete)	        Delete a resource(s)
+
+
+- HTTP Version
+
+    Year	Version
+    1991	HTTP/0.9
+    1994	HTTPS
+    1996	HTTP/1.0
+    1997	HTTP/1.1
+    2015	HTTP/2
+    2019	HTTP/3
+
+- Headers
+    - HTTP Headers let the client and the server to pass additional information with an HTTP request or response.
+
+- Body
+    - We place the data in the Request body when we want to send data to the server.
+
+- For example, form details filled by the user.
+
+- HTTP Requests
+
+    - Start Line
+        - URL
+            - Protocol
+                - HTTP
+                - HTTPS
+            - Domain Name
+            - Path
+            - Query Parameters
+        - HTTP Method
+            - GET (Read)
+            - POST (Create)
+            - PUT (Update)
+            - DELETE (Delete)
+        - HTTP Version
+    - Headers
+    - Body
+
+- HTTP Responses
+    - HTTP responses are messages sent by the server as an answer to the clients request.
+
+    - HTTP Response includes
+
+        - Status Line
+        - Headers
+        - Body
+
+- Status Line
+    - A Status line specifies a
+
+        - HTTP version
+        - Status code
+        - Status text
+
+
+- Status code
+- Status codes Indicate whether an HTTP request has been successfully completed or not.
+
+    Status Code Series	  Indicates
+    1XX	                  Information
+    2XX	                  Success
+    3XX	                  Redirection
+    4XX	                  Client Error
+    5XX	                  Server Error
+
+    - 200 ( Success ) - Indicates that the request has succeeded
+
+    - 201 ( Created ) - The request has succeeded and a new resource has been created as a result
+
+- Status text
+
+    Status Code	        Status Text
+    200	                OK
+    204	                No Response
+    301	                Moved Permanently
+    401	                Unauthorized
+    403	                Forbidden
+    404	                Not Found
+
+- Body
+    - Response Body contains the resource data that was requested by the client.
+
+- HTTP Responses
+
+    - Status Line
+        - HTTP version
+        - Status code
+            - 1XX
+            - 2XX
+            - 3XX
+            - 4XX
+            - 5XX
+        - Status text
+    - Headers
+    - Body ```
