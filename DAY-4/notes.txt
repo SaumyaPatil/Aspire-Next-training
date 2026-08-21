@@ -1,0 +1,100 @@
+REST, Resource-Based URL Design & Statelessness
+
+
+1. WHAT IS REST?
+
+REST (Representational State Transfer) is an architectural style for designing networked APIs/web services. It is a set of guidelines/constraints, not a strict protocol.
+
+Key Points:
+
+    1. Client and Server are two different systems
+       - The client (frontend/UI) and the server (backend/data) are separate and independent of each other.
+       - They communicate over HTTP, but neither depends on the internal implementation of the other.
+       - This separation allows the client and server to be developed, updated, and scaled independently.
+
+    2. HTTP methods should be respected
+       - Each HTTP method has a specific meaning/purpose and should be used accordingly:
+           GET    -> Retrieve data (read-only, no side effects)
+           POST   -> Create a new resource
+           PUT    -> Update/replace an existing resource fully
+           PATCH  -> Partially update an existing resource
+           DELETE -> Remove a resource
+       - Using the correct method makes the API predictable and consistent for anyone consuming it.
+
+
+2. RESOURCE-BASED URL DESIGN
+
+- URLs should represent RESOURCES (nouns), not actions (verbs).
+- The action is conveyed by the HTTP method, not the URL.
+
+Bad Example (action-based URLs):
+    GET    /getUser?id=5
+    POST   /createUser
+    POST   /deleteUser?id=5
+
+Good Example (resource-based URLs):
+    GET    /users/5   -> Get user with id 5
+    POST   /users     -> Create a new user
+    PUT    /users/5   -> Replace user 5
+    PATCH  /users/5   -> Partially update user 5
+    DELETE /users/5   -> Delete user 5
+
+Best Practices:
+    - Use plural nouns for collections (e.g., /users, not /user)
+    - Use nesting to show relationships: /users/5/orders -> Orders belonging to user 5
+    - Use query parameters for filtering, sorting, pagination: /users?role=admin&sort=name&page=2
+    - Keep URL structure consistent and predictable throughout the API.
+
+
+3. STATELESSNESS
+
+- Statelessness is a core REST constraint.
+- Each request from the client to the server must contain all the information needed for the server to understand and process it.
+- The server does NOT store any session/state about the client between requests.
+
+How "state" is handled:
+    - Instead of server-side sessions, state (like login info) is carried in each request, usually via a token (e.g., JWT) sent in the request headers.
+
+Why Statelessness Matters:
+    - Scalability: Any server instance can handle any request, since no session is tied to a specific server (helps with load balancing).
+    - Reliability: No session data is lost if a server crashes.
+    - Simplicity: Each request is independent and easier to debug/reason about.
+
+
+4. WHY WE USE FRAMEWORKS INSTEAD OF RAW http
+
+Node's built-in `http` module only gives the bare minimum - listening for requests and sending responses. Everything else has to be handled manually.
+
+Problems with raw `http`:
+
+    1. Routing is manual string matching
+       - Have to write long if/else or switch chains checking req.method and req.url.
+       - No built-in pattern matching for routes like /users/:id/orders/:orderId.
+
+    2. No built-in body parsing
+       - JSON/form data/file uploads must be manually collected as data chunks, concatenated, and parsed every time.
+
+    3. No middleware concept
+       - Common needs like logging, authentication, CORS, error handling, compression have no clean place to live.
+       - Logic ends up duplicated across every route handler.
+
+    4. Minimal response helpers
+       - Sending JSON requires manually setting Content-Type, calling JSON.stringify(), and res.end() every time.
+
+    5. No standard error handling
+       - An uncaught error in an async handler can crash the server or hang the request with nothing to catch it.
+
+    6. No ecosystem hooks
+       - Things like sessions, template rendering, static file serving all need to be built from scratch.
+
+What a framework (Express) provides:
+    - Declarative routing with path parameters, wildcards, and route grouping.
+    - Middleware pipeline - clean, composable way to run logic (auth, logging, validation) before the route handler.
+    - Built-in body/query parsing (express.json(), etc.)
+    - Convenience response methods: res.json(), res.status(), res.send(), res.redirect()
+    - Large ecosystem of plug-and-play middleware (cors, helmet, morgan, multer, etc.)
+
+The Tradeoff:
+    - Raw http is fine for a single tiny endpoint and is good for learning the fundamentals.
+    - Once an app has multiple routes, needs JSON parsing, or needs shared logic (like auth checks), raw http basically means reinventing parts of Express manually.
+    - Frameworks solve these common problems once, well, and share that solution across the ecosystem - saving everyone from repeating the same boilerplate.
