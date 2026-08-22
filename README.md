@@ -44,20 +44,14 @@
 
 - Installing Express, setting up an app
 - Routing (`app.get/post/put/delete`), route parameters, query params
-- Middleware concept — what it is, `app.use()`, built-in middleware (`express.json()`)
-- Serving static files
-- Project folder structure best practices (routes/controllers/models)
-
+  
 ---
 
 ## Day 6 — Express Advanced: Building a Real REST API
 
-- Full CRUD API design (in-memory) — Create, Read, Update, Delete
-- Custom middleware (logging, validation)
-- Centralized error-handling middleware
-- Input validation (`express-validator` or manual checks)
-- Environment variables with `dotenv`
-
+- Full CRUD API design using mock data — Create, Read, Update, Delete
+- Middleware concept — what it is, `app.use()`, built-in middleware (`express.urlencoded()`)
+  
 ---
 
 ## Day 7 — MongoDB Glimpse: NoSQL Fundamentals
