@@ -51,7 +51,7 @@
   
 ---
 
-## Day 6 — Express Advanced: Building a Real REST API
+## Day 6 — Building a Real REST API
 
 - Full CRUD API design using mock data — Create, Read, Update, Delete
 - Testing APIs using POSTMAN
