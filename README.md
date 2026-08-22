@@ -124,3 +124,6 @@
 
 - https://www.npmjs.com/
 - https://nodejs.org/docs/latest/api/
+- https://www.mockaroo.com/
+- https://expressjs.com/
+- https://www.postman.com/
