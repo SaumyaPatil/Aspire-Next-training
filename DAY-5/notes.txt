@@ -1,0 +1,7 @@
+- Installing & setting up Express
+cmd: npm install express
+
+- routing, route params, query params
+    - route params (:id — part of the URL path, identifies a specific resource) 
+    - query params (?key=value — optional filters/modifiers).
+
