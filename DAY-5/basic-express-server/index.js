@@ -2,6 +2,7 @@ const express = require("express");
 
 const app = express();
 
+// REST APIs - routing
 app.get("/", (req, res) => {
   return res.send("Hello From Home Page");
 });
