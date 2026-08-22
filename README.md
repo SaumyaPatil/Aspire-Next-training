@@ -42,15 +42,21 @@
 
 ## Day 5 — Express.js Basics
 
+- nodejs server code VS expressjs server code
 - Installing Express, setting up an app
 - Routing (`app.get/post/put/delete`), route parameters, query params
+- Handling 'Read' request using browser
+- Limitations of browser in API testing (post, patch, delete request)
+- Walkthrough of POSTMAN platform
   
 ---
 
 ## Day 6 — Express Advanced: Building a Real REST API
 
 - Full CRUD API design using mock data — Create, Read, Update, Delete
-- Middleware concept — what it is, `app.use()`, built-in middleware (`express.urlencoded()`)
+- Testing APIs using POSTMAN
+- Middleware concept — what it is, middleware chain
+- built-in middleware functions - `express.urlencoded()` & `app.use()`
   
 ---
 
